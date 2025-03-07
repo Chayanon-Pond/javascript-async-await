@@ -33,3 +33,15 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+
+getJohnProfile()
+  .then((result) => {
+    console.log(result);
+    return getJohnOrders();
+  })
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((result) => {
+    console.log(result);
+  });
