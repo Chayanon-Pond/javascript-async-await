@@ -13,6 +13,17 @@ let getJohnProfile = () => {
 };
 // Start coding here
 
-getJohnProfile().catch((result) => {
-  console.log(result);
-});
+// getJohnProfile().catch((result) => {
+//   console.log(result);
+// });
+
+async function main() {
+  try {
+    const result = await getJohnProfile();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+main();

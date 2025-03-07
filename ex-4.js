@@ -14,6 +14,16 @@ let getJohnProfile = () => {
 };
 // Start coding here
 
-getJohnProfile().then((result) => {
-  console.log(result);
-});
+// getJohnProfile().then((result) => {
+//   console.log(result);
+// });
+
+async function main() {
+  try {
+    const result = await getJohnProfile();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+main();

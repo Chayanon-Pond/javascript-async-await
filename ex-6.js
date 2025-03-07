@@ -34,14 +34,25 @@ let getJohnOrders = () => {
 
 // Start coding here
 
-getJohnProfile()
-  .then((result) => {
+// getJohnProfile()
+//   .then((result) => {
+//     console.log(result);
+//     return getJohnOrders();
+//   })
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((result) => {
+//     console.log(result);
+//   });
+
+async function main() {
+  try {
+    const result = await getJohnProfile();
     console.log(result);
-    return getJohnOrders();
-  })
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((result) => {
-    console.log(result);
-  });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+main()
