@@ -1,7 +1,7 @@
 //Exercise #1
 
 let getJohnProfile = () => {
-  return new Promise(function (resolve) {
+return new Promise(function (resolve) {
     setTimeout(
       () =>
         resolve({
@@ -14,3 +14,5 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+
+getJohnProfile().then(profile => {console.log(profile)})
